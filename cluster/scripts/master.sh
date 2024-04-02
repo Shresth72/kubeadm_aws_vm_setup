@@ -14,6 +14,8 @@ POD_CIDR="192.168.0.0/16"
 
 sudo kubeadm config images pull
 
+# ---- Initialize kubeadm using shell scripts with etcd ---- #
+
 # Initialize kubeadm based on PUBLIC_IP_ACCESS
 
 if [[ "$PUBLIC_IP_ACCESS" == "false" ]]; then
@@ -41,3 +43,4 @@ sudo chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config
 # (To enable pod-to-pod communication & power networking)
 
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+

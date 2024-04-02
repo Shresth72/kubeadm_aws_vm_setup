@@ -42,3 +42,7 @@ resource "aws_instance" "example" {
 
   subnet_id = element(var.subnet_ids, count.index % length(var.subnet_ids))
 }
+
+output "instance_public_ip" {
+  value = aws_instance.example.*.public_ip
+}
