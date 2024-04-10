@@ -1,5 +1,9 @@
 #!/bin/bash
 #
+# Set Hostname if not set - MASTER 
+# sudo su 
+# hostnamectl set-hostname master 
+
 # Setup for Control Plane (Master) servers
 
 set -euxo pipefail
